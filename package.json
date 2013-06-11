@@ -1,0 +1,13 @@
+{
+  "name": "gallerygrab",
+  "description": "SmugMug Email Gallery Grab",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "commander-plus": "0.0.6",
+    "underscore": "1.4.4",
+    "shelljs": "0.1.4",
+    "curlrequest": "0.3.10",
+    "imap": "0.7.12"
+  }
+}
