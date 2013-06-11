@@ -7,7 +7,6 @@ var util    = require('util'),
     _       = require('underscore')._,
     url     = require('url'),
     Imap    = require('imap'),
-
     args    = require('./config.json');
 
 var imap = null;
@@ -69,7 +68,6 @@ function processInbox(password) {
                                             url: result[2],
                                             size: result[3]
                                         });
-                                        // console.log("%s\n%s\n%s\n", result[1], result[2], result[3]);                                        
                                     } else {
                                         die('Something went wrong');
                                     }
@@ -82,12 +80,14 @@ function processInbox(password) {
                         var shell = require('shelljs');
 
                         shell.mkdir('smugmug');
+                        shell.cd('smugmug');
+
                         _.each(download_list, function(item) {
 
                             var filename = item.url.substring(item.url.lastIndexOf('/') + 1);
 
                             console.log('Download gallery [%s] (%s) from %s', item.gallery, item.size, item.url);
-                            shell.cd('smugmug');
+
                             shell.mkdir(item.gallery);
                             shell.cd(item.gallery);
                             var download = shell.exec(util.format('curl -L %s -o %s.zip', item.url, filename));
