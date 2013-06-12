@@ -6,8 +6,11 @@ lib-cov
 *.out
 *.pid
 *.gz
+.DS_Store
+download.json
 node_modules
 smugmug
+config.json
 
 pids
 logs

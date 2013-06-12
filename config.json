@@ -1,6 +1,6 @@
 {
 	"imap": {
-		"user": "your@email.com",
+		"user": "email@gmail.com",
 		"host": "imap.gmail.com",
 		"port": 993,
 		"secure": true
